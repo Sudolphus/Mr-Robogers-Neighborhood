@@ -14,6 +14,7 @@ _This function takes a number from the user, and the robot count to that number.
 | :-------------     | :------------- | :------------- |
 | **Homepage** | User accesses localhost:5004 | Homepage with user input form |
 | **Program Gathers User Input** | User input: "10" | Output: "10" |
+| **Program Rejects Non-Positive Integers** | User input: "Hello!" | Output: "Error" |
 | **Program Creates an Array from 0 to the Inputted Number** | User input: "4" | Output: "0, 1, 2, 3, 4" |
 | **Program Checks Whether A Number Contains a 3**| User Input: "35" | Output: "true" |
 | **Program Replaces Numbers That Contain a 3 with "Won't You Be My Neighbor?"**| Input: "33" | Output: "Won't You Be My Neighbor?" |

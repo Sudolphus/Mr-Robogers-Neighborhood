@@ -6,6 +6,10 @@ const arrayGen = function(upperLimit) {
   }
 }
 
+const threeCheck = function(number) {
+  
+}
+
 //user interface logic
 $(document).ready(function() {
   $("form").submit(function(event) {
