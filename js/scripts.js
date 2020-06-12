@@ -47,4 +47,14 @@ $(document).ready(function() {
       }, 5700*i);
     }
   })
+
+  $("button.dayNightButton").click(function() {
+    if ($("body").hasClass("dayMode")) {
+      $("body").removeClass("dayMode");
+      $("body").addClass("nightMode");
+    } else {
+      $("body").removeClass("nightMode");
+      $("body").addClass("dayMode");
+    }
+  })
 })

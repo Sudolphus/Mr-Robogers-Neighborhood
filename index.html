@@ -7,18 +7,21 @@
     <script src="js/jquery-3.5.1.js"></script>
     <script src="js/scripts.js"></script>
   </head>
-  <body>
+  <body class="dayMode">
     <div class="container">
+      <button class="btn btn-success dayNightButton">Toggle Day/Night Mode</button>
       <div class="page-header">
         <h1>Mr. Roboger's Neighborhood</h1>
         <p>A Friendly Robot Attempts to Count</p>
       </div>
 
       <form>
-        <div class="form-group">
-          <label for="numberInput">What number would you like Mr. Roboger to count to?</label>
+        <div class="form-group">  
           <div class="row">
-            <div class="col-lg-9">
+            <div class='col-lg-5'>
+              <label for="numberInput">What number would you like Mr. Roboger to count to?</label>
+            </div>
+            <div class="col-lg-4">
               <input name="numberInput" type="number" class="form-control">
             </div>
             <div class="col-lg-3">
