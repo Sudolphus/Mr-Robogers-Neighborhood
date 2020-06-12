@@ -32,9 +32,14 @@ $(document).ready(function() {
     event.preventDefault();
     $("#robotOutput").empty();
     const upperLimit = parseInt($("input[name=numberInput]").val());
+    const userName = $("input[name=nameInput]").val();
+
     if (!upperLimit || upperLimit < 0 || upperLimit % 1 != 0) {
-      alert("Enter a positive integer!");
+      alert("Mr. Robogear Only Counts to Positive Integers!");
+    } else if (!userName) {
+      alert("Tell Mr. Robogear Your Name, Sport!")
     }
+
     const outputArray = arrayGen(upperLimit);
 
     for (let i = 0; i < outputArray.length; i++) {
