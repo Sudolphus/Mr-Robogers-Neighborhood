@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Dummy Title</title>
+    <title>Mr. Roboger's Neighborhood</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.5.1.js"></script>
@@ -9,7 +9,30 @@
   </head>
   <body>
     <div class="container">
-      
+      <div class="page-header">
+        <h1>Mr. Roboger's Neighborhood</h1>
+        <p>A Friendly Robot Attempts to Count</p>
+      </div>
+
+      <form>
+        <div class="form-group">
+          <label for="numberInput">What number would you like Mr. Roboger to count to?</label>
+          <div class="row">
+            <div class="col-lg-9">
+              <input name="numberInput" type="number" class="form-control">
+            </div>
+            <div class="col-lg-3">
+              <button class="btn btn-success" type="submit">Count!</button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div>
+        <ol id="NumberOutput">
+
+        </ol>
+      </div>
     </div>
   </body>
 </html>
