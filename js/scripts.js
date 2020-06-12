@@ -3,8 +3,13 @@ const arrayGen = function(upperLimit) {
   const numberRange = [];
   for (let i = 0; i <= upperLimit; i++) {
     const numberString = i.toString().split('');
-    numberRange.push(i);
+    if (threeCheck(numberString)) {
+      numberRange.push("Won't You Be My Neighbor?");
+    } else {
+      numberRange.push(i);
+    }
   }
+  console.log(numberRange);
 }
 
 const threeCheck = function(numberString) {
