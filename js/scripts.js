@@ -8,9 +8,9 @@ const arrayGen = function(upperLimit) {
     } else if (digitCheck(numberString, 2)) {
       numberRange.push("Boop!");
     } else if (digitCheck(numberString, 1)) {
-      alert('true');
+      numberRange.push("Beep!");
     } else {
-      numberRange.push(i);
+      numberRange.push("The next number is " + i.toString() + "!");
     }
   }
   console.log(numberRange);
