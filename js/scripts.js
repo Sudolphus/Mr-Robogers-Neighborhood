@@ -3,7 +3,7 @@ const arrayGen = function(upperLimit) {
   const numberRange = [];
   for (let i = 0; i <= upperLimit; i++) {
     const numberString = i.toString().split('');
-    if (threeCheck(numberString)) {
+    if (digitCheck(numberString, 3)) {
       numberRange.push("Won't You Be My Neighbor?");
     } else {
       numberRange.push(i);
@@ -12,9 +12,10 @@ const arrayGen = function(upperLimit) {
   console.log(numberRange);
 }
 
-const threeCheck = function(numberString) {
+const digitCheck = function(numberString, checkDigit) {
+  const compareDigit = checkDigit.toString();
   for (const digit of numberString) {
-    if (digit === "3") {
+    if (digit === compareDigit) {
       return true;
     }
   }
