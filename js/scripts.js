@@ -1,7 +1,7 @@
 //business logic
 const arrayGen = function(upperLimit, userName) {
-  const numberRange = [];
-  for (let i = 0; i <= upperLimit; i++) {
+  const numberRange = ["Here we go! I'll do my best!", "The first number is 0!"];
+  for (let i = 1; i <= upperLimit; i++) {
     const numberString = i.toString().split('');
     if (digitCheck(numberString, 3)) {
       numberRange.push("Won't You Be My Neighbor, " + userName + "?");
@@ -34,7 +34,7 @@ $(document).ready(function() {
     const upperLimit = parseInt($("input[name=numberInput]").val());
     const userName = $("input[name=nameInput]").val();
 
-    if (!upperLimit || upperLimit < 0 || upperLimit % 1 != 0) {
+    if (!upperLimit || upperLimit < 1 || upperLimit % 1 != 0) {
       alert("Mr. Robogear Only Counts to Positive Integers!");
     } else if (!userName) {
       alert("Tell Mr. Robogear Your Name, Sport!")

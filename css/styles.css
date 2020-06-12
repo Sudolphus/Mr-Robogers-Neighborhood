@@ -11,6 +11,10 @@
   float: right;
 }
 
+.page-header {
+  text-align: center;
+}
+
 .robogearLine {
   display: none;
 }
