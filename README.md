@@ -1,12 +1,28 @@
-# _{Application Name}_
+# _Mr Roboger's Neighborhood_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _A Friendly Robot Attamts to Count, 6.12.20_
 
 #### By _**Micheal Hansen**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_This function takes a number from the user, and the robot count to that number. He gets a little distracted along the way, and sometimes says the wrong thing, however._
+
+## Specifications
+
+| Spec | Input | Output |
+| :-------------     | :------------- | :------------- |
+| **Homepage** | User accesses localhost:5004 | Homepage with user input form |
+| **Program Gathers User Input** | User input: "10" | Output: "10" |
+| **Program Creates an Array from 0 to the Inputted Number** | User input: "4" | Output: "0, 1, 2, 3, 4" |
+| **Program Checks Whether A Number Contains a 3**| User Input: "35" | Output: "true" |
+| **Program Replaces Numbers That Contain a 3 with "Won't You Be My Neighbor?"**| Input: "33" | Output: "Won't You Be My Neighbor?" |
+| **Program Checks Whether A Number Contains a 2**| Input: "24" | Output: "true" |
+| **Program Replaces Numbers That Contain a 2 with "Boop!"**| Input: "52" | Output: "Boop!" |
+| **Program Checks Whether A Number Contains a 1**| Input: "15" | Output: "true" |
+| **Program Replaces Numbers That Contain a 1 with "Beep!"**| Input: "1" | Output: "Beep!" |
+| **Program Prints The Array**| Input: "4" | Output: "0, 'Beep!', 'Boop!', 'Won't You Be My Neighbor?', 4" |
+| **Program Deletes the Output and Restarts When a New Number is Entered**| Input: "2" | Output: "0, 'Beep!', 'Boop!'" |
 
 ## Setup/Installation Requirements
 
@@ -20,8 +36,8 @@ Open by downloading:
 
 Open via Bash/GitBash:
 1. Clone this repository onto your computer:
-`git clone {PUT_REPO_HERE}`
-2. Navigate into the `{NAME_OF_DIRECTORY}` directory in Visual Studio Code or preferred text editor
+`git clone https://github.com/Sudolphus/Mr-Robogers-Neighborhood`
+2. Navigate into the `Mr-Robogers-Neighborhood` directory in Visual Studio Code or preferred text editor
 `code .`
 3. Open index.html in Chrome or preferred browser:
 `open index.html`
@@ -31,7 +47,7 @@ Open via Bash/GitBash:
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_None currently known_
 
 ## Support and contact details
 
