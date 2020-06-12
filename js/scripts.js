@@ -37,8 +37,9 @@ $(document).ready(function() {
     }
     const outputArray = arrayGen(upperLimit);
 
-    for (const line of outputArray) {
-      $("#numberOutput").append("<li>" + line + "</li>");
+    for (let i = 0; i < outputArray.length; i++) {
+      $("#numberOutput").append("<li class='robogearLine'>" + outputArray[i] + "</li>");
+      $(".robogearLine:last").fadeIn(2000).delay(3000).fadeOut(1000);
     }
   })
 })
