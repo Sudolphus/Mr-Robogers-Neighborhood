@@ -1,3 +1,7 @@
+body {
+  background-color: red;
+}
+
 .robogearLine {
   display: none;
 }
@@ -7,6 +11,18 @@ img {
   max-height: 100%;
 }
 
+.robotBox {
+  height: 65vh;
+  float: left;
+}
+
 .textBox {
-  border: 2px solid black;
+  height: 60vh;
+  margin-left: 30vh;
+  background-image: url("../img/word-bubble.png");
+}
+
+.robotOutput {
+  margin-left: 20px;
+  margin-top: 40px;
 }
