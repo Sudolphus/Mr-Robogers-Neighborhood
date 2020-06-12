@@ -30,6 +30,7 @@ const digitCheck = function(numberString, checkDigit) {
 $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
+    $("#numberOutput").empty();
     const upperLimit = parseInt($("input[name=numberInput]").val());
     if (!upperLimit || upperLimit < 0 || upperLimit % 1 != 0) {
       alert("Enter a positive integer!");
