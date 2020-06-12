@@ -1,18 +1,35 @@
 //business logic
 const arrayGen = function(upperLimit, userName, backwards) {
   const numberRange = ["Here we go! I'll do my best!"];
-  for (let i = 1; i <= upperLimit; i++) {
-    const numberString = i.toString().split('');
-    if (digitCheck(numberString, 3)) {
-      numberRange.push("Won't You Be My Neighbor, " + userName + "?");
-    } else if (digitCheck(numberString, 2)) {
-      numberRange.push("Boop!");
-    } else if (digitCheck(numberString, 1)) {
-      numberRange.push("Beep!");
-    } else {
-      numberRange.push("The next number is " + i.toString() + "!");
+  if (!backwards) {
+    numberRange.push("The first number is 0!");
+    for (let i = 1; i <= upperLimit; i++) {
+      const numberString = i.toString().split('');
+      if (digitCheck(numberString, 3)) {
+        numberRange.push("Won't You Be My Neighbor, " + userName + "?");
+      } else if (digitCheck(numberString, 2)) {
+        numberRange.push("Boop!");
+      } else if (digitCheck(numberString, 1)) {
+        numberRange.push("Beep!");
+      } else {
+        numberRange.push("The next number is " + i.toString() + "!");
+      }
+    }
+  } else {
+    for (let i = upperLimit; i >= 0; i--) {
+      const numberString = i.toString().split('');
+      if (digitCheck(numberString, 3)) {
+        numberRange.push("Won't You Be My Neighbor, " + userName + "?");
+      } else if (digitCheck(numberString, 2)) {
+        numberRange.push("Boop!");
+      } else if (digitCheck(numberString, 1)) {
+        numberRange.push("Beep!");
+      } else {
+        numberRange.push("The next number is " + i.toString() + "!");
+      }
     }
   }
+  numberRange.push("That's it! That's all the numbers!");
   return numberRange;
 }
 
