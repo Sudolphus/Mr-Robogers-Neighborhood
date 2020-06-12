@@ -2,12 +2,18 @@
 const arrayGen = function(upperLimit) {
   const numberRange = [];
   for (let i = 0; i <= upperLimit; i++) {
+    const numberString = i.toString().split('');
     numberRange.push(i);
   }
 }
 
-const threeCheck = function(number) {
-  
+const threeCheck = function(numberString) {
+  for (const digit of numberString) {
+    if (digit === "3") {
+      return true;
+    }
+  }
+  return false;
 }
 
 //user interface logic
