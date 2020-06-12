@@ -30,16 +30,19 @@ const digitCheck = function(numberString, checkDigit) {
 $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
-    $("#numberOutput").empty();
+    $("#robotOutput").empty();
     const upperLimit = parseInt($("input[name=numberInput]").val());
     if (!upperLimit || upperLimit < 0 || upperLimit % 1 != 0) {
       alert("Enter a positive integer!");
     }
     const outputArray = arrayGen(upperLimit);
 
-    for (let i = 0; i < outputArray.length; i++) {
-      $("#numberOutput").append("<li class='robogearLine'>" + outputArray[i] + "</li>");
-      $(".robogearLine:last").fadeIn(2000).delay(3000).fadeOut(1000);
+    for (const line of outputArray) {
+      $("#robotOutput").append("<p class=robogearLine>" + line + "</p>");
     }
+    
+    $(".robogearLine:first").fadeIn(2000).delay(2000).fadeOut(2000, function() {
+      $(this).next().fadeIn(2000).delay(2000).fadeOut(2000);
+    })
   })
 })
