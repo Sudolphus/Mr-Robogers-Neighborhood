@@ -5,6 +5,8 @@ const arrayGen = function(upperLimit) {
     const numberString = i.toString().split('');
     if (digitCheck(numberString, 3)) {
       numberRange.push("Won't You Be My Neighbor?");
+    } else if (digitCheck(numberString, 2)) {
+      alert(true);
     } else {
       numberRange.push(i);
     }
