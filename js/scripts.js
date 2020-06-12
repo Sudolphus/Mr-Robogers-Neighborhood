@@ -14,7 +14,10 @@ const threeCheck = function(number) {
 $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
-    const upperLimit = $("input[name=numberInput]").val();
+    const upperLimit = parseInt($("input[name=numberInput]").val());
+    if (!upperLimit || upperLimit < 0 || upperLimit % 1 != 0) {
+      alert("Enter a positive integer!");
+    }
     const outputArray = arrayGen(upperLimit);
   })
 })
