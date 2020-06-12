@@ -13,7 +13,7 @@ const arrayGen = function(upperLimit) {
       numberRange.push("The next number is " + i.toString() + "!");
     }
   }
-  console.log(numberRange);
+  return numberRange;
 }
 
 const digitCheck = function(numberString, checkDigit) {
@@ -35,5 +35,9 @@ $(document).ready(function() {
       alert("Enter a positive integer!");
     }
     const outputArray = arrayGen(upperLimit);
+
+    for (const line of outputArray) {
+      $("#numberOutput").append("<li>" + line + "</li>");
+    }
   })
 })
