@@ -37,12 +37,14 @@ $(document).ready(function() {
     }
     const outputArray = arrayGen(upperLimit);
 
-    for (const line of outputArray) {
-      $("#robotOutput").append("<p class=robogearLine>" + line + "</p>");
+    for (let i = 0; i < outputArray.length; i++) {
+      $("#robotOutput").append(`<p class='robogearLine' id='line${i}'>${outputArray[i]}</p>`);
     }
-    
-    $(".robogearLine:first").fadeIn(2000).delay(2000).fadeOut(2000, function() {
-      $(this).next().fadeIn(2000).delay(2000).fadeOut(2000);
-    })
+
+    for (let i = 0; i < outputArray.length; i++) {
+      window.setTimeout(function() {
+        $(`#line${i}`).fadeIn(2000).delay(2000).fadeOut(2000);
+      }, 5700*i);
+    }
   })
 })
