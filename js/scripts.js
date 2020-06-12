@@ -1,10 +1,10 @@
 //business logic
-const arrayGen = function(upperLimit) {
+const arrayGen = function(upperLimit, userName) {
   const numberRange = [];
   for (let i = 0; i <= upperLimit; i++) {
     const numberString = i.toString().split('');
     if (digitCheck(numberString, 3)) {
-      numberRange.push("Won't You Be My Neighbor?");
+      numberRange.push("Won't You Be My Neighbor, " + userName + "?");
     } else if (digitCheck(numberString, 2)) {
       numberRange.push("Boop!");
     } else if (digitCheck(numberString, 1)) {
@@ -40,7 +40,7 @@ $(document).ready(function() {
       alert("Tell Mr. Robogear Your Name, Sport!")
     }
 
-    const outputArray = arrayGen(upperLimit);
+    const outputArray = arrayGen(upperLimit, userName);
 
     for (let i = 0; i < outputArray.length; i++) {
       $("#robotOutput").append(`<p class='robogearLine' id='line${i}'>${outputArray[i]}</p>`);
