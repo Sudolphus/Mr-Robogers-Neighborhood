@@ -1,6 +1,6 @@
 //business logic
-const arrayGen = function(upperLimit, userName) {
-  const numberRange = ["Here we go! I'll do my best!", "The first number is 0!"];
+const arrayGen = function(upperLimit, userName, backwards) {
+  const numberRange = ["Here we go! I'll do my best!"];
   for (let i = 1; i <= upperLimit; i++) {
     const numberString = i.toString().split('');
     if (digitCheck(numberString, 3)) {
@@ -33,14 +33,20 @@ $(document).ready(function() {
     $("#robotOutput").empty();
     const upperLimit = parseInt($("input[name=numberInput]").val());
     const userName = $("input[name=nameInput]").val();
-
+    let backwards;
+    if ($("input#backwards:checked").length) {
+      backwards = true;
+    } else {
+      backwards = false;
+    }
+    
     if (!upperLimit || upperLimit < 1 || upperLimit % 1 != 0) {
       alert("Mr. Robogear Only Counts to Positive Integers!");
     } else if (!userName) {
       alert("Tell Mr. Robogear Your Name, Sport!")
     }
 
-    const outputArray = arrayGen(upperLimit, userName);
+    const outputArray = arrayGen(upperLimit, userName, backwards);
 
     for (let i = 0; i < outputArray.length; i++) {
       $("#robotOutput").append(`<p class='robogearLine' id='line${i}'>${outputArray[i]}</p>`);
