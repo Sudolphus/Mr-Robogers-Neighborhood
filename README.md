@@ -1,6 +1,6 @@
 # _Mr Roboger's Neighborhood_
 
-#### _A Friendly Robot Attamts to Count, 6.12.20_
+#### _A Friendly Robot Attempts to Count, 6.12.20_
 
 #### By _**Micheal Hansen**_
 
